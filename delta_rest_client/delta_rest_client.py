@@ -211,9 +211,10 @@ class DeltaRestClient:
     return self.create_order(order)
 
   def place_order(self, product_id, size, side, limit_price=None, time_in_force=None, order_type=OrderType.LIMIT, post_only='false', client_order_id = None):
+    print('placing order')
     order = {
       'product_id': product_id,
-      'size': int(size),
+      'size': flot(size),
       'side': side,
       'order_type': order_type.value,
       'post_only': post_only
