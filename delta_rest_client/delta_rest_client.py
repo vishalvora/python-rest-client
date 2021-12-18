@@ -214,7 +214,7 @@ class DeltaRestClient:
     print('placing order')
     order = {
       'product_id': product_id,
-      'size': flot(size),
+      'size': float(size),
       'side': side,
       'order_type': order_type.value,
       'post_only': post_only
